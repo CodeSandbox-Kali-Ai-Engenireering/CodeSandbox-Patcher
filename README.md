@@ -1,40 +1,7 @@
-┌──(kali㉿anton[~]
-└─$ 
 ♾Cross-Shell🐞Type-Script🛠R♾-OSX-Automation
 ┌──(kali㉿anton[~]
-└─$ # Kali🐞Tmux🚀Star🚀Ship🛠Automation 
+└─$ # Kali🐞Tmux🚀DeathStar🚀🛠Automation 
 https://accounts.google.com/o/saml2/idp?idpid=C038bembj
-
-
-> [__azurite_db_blob__.json](https://github.com/user-attachments/files/17368807/__azurite_db_blob__.json)
-> [__azurite_db_blob_extent__.json](https://github.com/user-attachments/files/17368808/__azurite_db_blob_extent__.json)
-> [♾Cross-Shell🐞Type-Script🛠or♾Automation ┌──(kali㉿anton)-[~] └─$.json](https://github.com/user-attachments/files/17368809/Cross-Shell.Type-Script.or.Automation.kali.anton.-.json)
-> [♾Cross-Shell🐞Type-Script🛠or♾Automation.txt](https://github.com/user-attachments/files/17368810/Cross-Shell.Type-Script.or.Automation.txt)
-> [ansible-jinja.json](https://github.com/user-attachments/files/17368811/ansible-jinja.json)
-> [azure-pipelines.json](https://github.com/user-attachments/files/17368812/azure-pipelines.json)
-> [buildtarget.json](https://github.com/user-attachments/files/17368813/buildtarget.json)
-> [cil.json](https://github.com/user-attachments/files/17368814/cil.json)
-> [cmake.json](https://github.com/user-attachments/files/17368815/cmake.json)
-> [code-runner-output.json](https://github.com/user-attachments/files/17368816/code-runner-output.json)
-> [code-text-binary.json](https://github.com/user-attachments/files/17368817/code-text-binary.json)
-> [dockercompose.json](https://github.com/user-attachments/files/17368818/dockercompose.json)
-> [dockerfile.json](https://github.com/user-attachments/files/17368819/dockerfile.json)
-> [github-actions-workflow.json](https://github.com/user-attachments/files/17368820/github-actions-workflow.json)
-> [git-rebase.json](https://github.com/user-attachments/files/17368821/git-rebase.json)
-> [javap-verbose.json](https://github.com/user-attachments/files/17368822/javap-verbose.json)
-> [javascript.json](https://github.com/user-attachments/files/17368823/javascript.json)
-> [javascriptreact.json](https://github.com/user-attachments/files/17368824/javascriptreact.json)
-> [local.log](https://github.com/user-attachments/files/17368825/local.log)
-> [makefile.json](https://github.com/user-attachments/files/17368826/makefile.json)
-> [mtrgen-rust.json](https://github.com/user-attachments/files/17368827/mtrgen-rust.json)
-> [powershell.json](https://github.com/user-attachments/files/17368828/powershell.json)
-> [rust.json](https://github.com/user-attachments/files/17368829/rust.json)
-> [shellscript.json](https://github.com/user-attachments/files/17368830/shellscript.json)
-> [sql.json](https://github.com/user-attachments/files/17368832/sql.json)
-> [typescript.json](https://github.com/user-attachments/files/17368833/typescript.json)
-┌──(kali㉿anton[~]
-└─$ 
-♾Cross-Shell🐞Type-Script🛠R♾Automation
 ┌──(kali㉿anton[~]
 └─$ 
 
