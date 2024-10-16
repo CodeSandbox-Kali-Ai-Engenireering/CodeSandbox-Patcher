@@ -1,0 +1,66 @@
+{
+  "name": "projects/turing-booster-438700-h2/alertPolicies/6125547352887594098",
+  "displayName": "Alert-Policy",
+  "documentation": {
+    "content": "> [__azurite_db_blob__.json](https://github.com/user-attachments/files/17368807/__azurite_db_blob__.json)\n> [__azurite_db_blob_extent__.json](https://github.com/user-attachments/files/17368808/__azurite_db_blob_extent__.json)\n> [♾Cross-Shell🐞Type-Script🛠or♾Automation ┌──(kali㉿anton)-[~] └─$.json](https://github.com/user-attachments/files/17368809/Cross-Shell.Type-Script.or.Automation.kali.anton.-.json)\n> [♾Cross-Shell🐞Type-Script🛠or♾Automation.txt](https://github.com/user-attachments/files/17368810/Cross-Shell.Type-Script.or.Automation.txt)\n> [ansible-jinja.json](https://github.com/user-attachments/files/17368811/ansible-jinja.json)\n> [azure-pipelines.json](https://github.com/user-attachments/files/17368812/azure-pipelines.json)\n> [buildtarget.json](https://github.com/user-attachments/files/17368813/buildtarget.json)\n> [cil.json](https://github.com/user-attachments/files/17368814/cil.json)\n> [cmake.json](https://github.com/user-attachments/files/17368815/cmake.json)\n> [code-runner-output.json](https://github.com/user-attachments/files/17368816/code-runner-output.json)\n> [code-text-binary.json](https://github.com/user-attachments/files/17368817/code-text-binary.json)\n> [dockercompose.json](https://github.com/user-attachments/files/17368818/dockercompose.json)\n> [dockerfile.json](https://github.com/user-attachments/files/17368819/dockerfile.json)\n> [github-actions-workflow.json](https://github.com/user-attachments/files/17368820/github-actions-workflow.json)\n> [git-rebase.json](https://github.com/user-attachments/files/17368821/git-rebase.json)\n> [javap-verbose.json](https://github.com/user-attachments/files/17368822/javap-verbose.json)\n> [javascript.json](https://github.com/user-attachments/files/17368823/javascript.json)\n> [javascriptreact.json](https://github.com/user-attachments/files/17368824/javascriptreact.json)\n> [local.log](https://github.com/user-attachments/files/17368825/local.log)\n> [makefile.json](https://github.com/user-attachments/files/17368826/makefile.json)\n> [mtrgen-rust.json](https://github.com/user-attachments/files/17368827/mtrgen-rust.json)\n> [powershell.json](https://github.com/user-attachments/files/17368828/powershell.json)\n> [rust.json](https://github.com/user-attachments/files/17368829/rust.json)\n> [shellscript.json](https://github.com/user-attachments/files/17368830/shellscript.json)\n> [sql.json](https://github.com/user-attachments/files/17368832/sql.json)\n> [typescript.json](https://github.com/user-attachments/files/17368833/typescript.json)",
+    "mimeType": "text/markdown",
+    "subject": "┌──(kali㉿anton[~] └─$  ♾Cross-Shell🐞Type-Script🛠R♾Automation"
+  },
+  "userLabels": {},
+  "conditions": [
+    {
+      "name": "projects/turing-booster-438700-h2/alertPolicies/6125547352887594098/conditions/6125547352887592851",
+      "displayName": "GKE Cluster  Logs By Severity",
+      "conditionThreshold": {
+        "aggregations": [
+          {
+            "alignmentPeriod": "21600s",
+            "perSeriesAligner": "ALIGN_RATE"
+          },
+          {
+            "alignmentPeriod": "300s",
+            "crossSeriesReducer": "REDUCE_SUM",
+            "groupByFields": [
+              "resource.label.project_id",
+              "resource.label.location",
+              "resource.label.cluster_name",
+              "metric.label.log",
+              "metric.label.severity"
+            ],
+            "perSeriesAligner": "ALIGN_INTERPOLATE"
+          }
+        ],
+        "comparison": "COMPARISON_GT",
+        "duration": "0s",
+        "filter": "resource.type = \"k8s_cluster\" AND resource.labels.cluster_name = \"https://console.cloud.google.com/cloud-setup/organization\" AND metric.type = \"logging.googleapis.com/log_entry_count\"",
+        "forecastOptions": {
+          "forecastHorizon": "3600s"
+        },
+        "trigger": {
+          "count": 1
+        }
+      }
+    }
+  ],
+  "alertStrategy": {
+    "autoClose": "43200s",
+    "notificationPrompts": [
+      "OPENED",
+      "CLOSED"
+    ]
+  },
+  "combiner": "OR",
+  "enabled": true,
+  "notificationChannels": [
+    "projects/turing-booster-438700-h2/notificationChannels/1059935711075988510"
+  ],
+  "creationRecord": {
+    "mutateTime": "2024-10-15T04:31:00.677266860Z",
+    "mutatedBy": "antonrneeser@gmail.com"
+  },
+  "mutationRecord": {
+    "mutateTime": "2024-10-15T04:31:00.677266860Z",
+    "mutatedBy": "antonrneeser@gmail.com"
+  },
+  "severity": "CRITICAL"
+}

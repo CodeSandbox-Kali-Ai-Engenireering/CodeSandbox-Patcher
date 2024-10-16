@@ -1,0 +1,54 @@
+{
+  "id": 2238171,
+  "name": "♾Cross-Shell🐞Type-Script🛠or♾Automation ┌──(kali㉿anton)-[~] └─$",
+  "target": "push",
+  "source_type": "Organization",
+  "source": "kali-anton",
+  "enforcement": "active",
+  "conditions": {
+    "repository_id": {
+      "repository_ids": [
+        872539388,
+        864841127
+      ]
+    }
+  },
+  "rules": [],
+  "bypass_actors": [
+    {
+      "actor_id": 2,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 4,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 5,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 26556,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 227296,
+      "actor_type": "EnterpriseOwner",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 1,
+      "actor_type": "OrganizationAdmin",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": null,
+      "actor_type": "DeployKey",
+      "bypass_mode": "always"
+    }
+  ]
+}
