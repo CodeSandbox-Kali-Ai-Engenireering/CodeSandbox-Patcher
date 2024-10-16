@@ -1,6 +1,5 @@
+pkg-Kali🐞Tmux🐞LogicAppsOSX
 🚀Space🚀Ship=&=Type-Script🛠or♾Automation
-
-Kali🐞Tmux🚀Star🚀Ship🛠Automation
 
 <p align="center">
   <img
@@ -164,6 +163,60 @@ Kali🐞Tmux🚀Star🚀Ship🛠Automation
   width="50%"
   align="right"
 />
+{
+  "id": 2238171,
+  "name": "♾Cross-Shell🐞Type-Script🛠or♾Automation ┌──(kali㉿anton)-[~] └─$",
+  "target": "push",
+  "source_type": "Organization",
+  "source": "kali-anton",
+  "enforcement": "active",
+  "conditions": {
+    "repository_id": {
+      "repository_ids": [
+        872539388,
+        864841127
+      ]
+    }
+  },
+  "rules": [],
+  "bypass_actors": [
+    {
+      "actor_id": 2,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 4,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 5,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 26556,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 227296,
+      "actor_type": "EnterpriseOwner",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": 1,
+      "actor_type": "OrganizationAdmin",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": null,
+      "actor_type": "DeployKey",
+      "bypass_mode": "always"
+    }
+  ]
+}
 
 **The minimal, blazing-fast, and infinitely customizable prompt for any shell!**
 
@@ -708,3 +761,71 @@ following steps:
    commits, tags and branches to the remote repository. From here, you will need
    to create a new release in GitHub so users can easily reference the new tags
    in their workflows.
+
+   ==============================================================================
+--- stable/10/release/release.sh	Mon Dec 30 01:32:17 2013	(r260070)
++++ stable/10/release/release.sh	Mon Dec 30 02:19:23 2013	(r260071)
+@@ -126,6 +126,7 @@ if [ "x${TARGET}" != "x" ] && [ "x${TARG
+ else
+ 	ARCH_FLAGS=
+ fi
++CHROOT_MAKEENV="MAKEOBJDIRPREFIX=${CHROOTDIR}/tmp/obj"
+ CHROOT_WMAKEFLAGS="${MAKE_FLAGS} ${WORLD_FLAGS} ${CONF_FILES}"
+ CHROOT_IMAKEFLAGS="${CONF_FILES}"
+ CHROOT_DMAKEFLAGS="${CONF_FILES}"
+@@ -162,29 +163,16 @@ if [ "x${NOPORTS}" = "x" ]; then
+ 	svn co ${SVNROOT}/${PORTBRANCH} ${CHROOTDIR}/usr/ports
+ fi
+ 
+-cp /etc/resolv.conf ${CHROOTDIR}/etc/resolv.conf
+ cd ${CHROOTDIR}/usr/src
+-make ${CHROOT_WMAKEFLAGS} buildworld
+-make ${CHROOT_IMAKEFLAGS} installworld DESTDIR=${CHROOTDIR}
+-make ${CHROOT_DMAKEFLAGS} distribution DESTDIR=${CHROOTDIR}
++env ${CHROOT_MAKEENV} make ${CHROOT_WMAKEFLAGS} buildworld
++env ${CHROOT_MAKEENV} make ${CHROOT_IMAKEFLAGS} installworld \
++	DESTDIR=${CHROOTDIR}
++env ${CHROOT_MAKEENV} make ${CHROOT_DMAKEFLAGS} distribution \
++	DESTDIR=${CHROOTDIR}
+ mount -t devfs devfs ${CHROOTDIR}/dev
++cp /etc/resolv.conf ${CHROOTDIR}/etc/resolv.conf
+ trap "umount ${CHROOTDIR}/dev" EXIT # Clean up devfs mount on exit
+ 
+-build_doc_ports() {
+-	# Run ldconfig(8) in the chroot directory so /var/run/ld-elf*.so.hints
+-	# is created.  This is needed by ports-mgmt/pkg.
+-	chroot ${CHROOTDIR} /etc/rc.d/ldconfig forcerestart
+-
+-	## Trick the ports 'run-autotools-fixup' target to do the right thing.
+-	_OSVERSION=$(sysctl -n kern.osreldate)
+-	if [ -d ${CHROOTDIR}/usr/doc ] && [ "x${NODOC}" = "x" ]; then
+-		PBUILD_FLAGS="OSVERSION=${_OSVERSION} BATCH=yes"
+-		PBUILD_FLAGS="${PBUILD_FLAGS}"
+-		chroot ${CHROOTDIR} make -C /usr/ports/textproc/docproj \
+-			${PBUILD_FLAGS} OPTIONS_UNSET="FOP IGOR" install clean distclean
+-	fi
+-}
+-
+ # If MAKE_CONF and/or SRC_CONF are set and not character devices (/dev/null),
+ # copy them to the chroot.
+ if [ -e ${MAKE_CONF} ] && [ ! -c ${MAKE_CONF} ]; then
+@@ -197,7 +185,18 @@ if [ -e ${SRC_CONF} ] && [ ! -c ${SRC_CO
+ fi
+ 
+ if [ -d ${CHROOTDIR}/usr/ports ]; then
+-	build_doc_ports ${CHROOTDIR}
++	# Run ldconfig(8) in the chroot directory so /var/run/ld-elf*.so.hints
++	# is created.  This is needed by ports-mgmt/pkg.
++	chroot ${CHROOTDIR} /etc/rc.d/ldconfig forcerestart
++
++	## Trick the ports 'run-autotools-fixup' target to do the right thing.
++	_OSVERSION=$(sysctl -n kern.osreldate)
++	if [ -d ${CHROOTDIR}/usr/doc ] && [ "x${NODOC}" = "x" ]; then
++		PBUILD_FLAGS="OSVERSION=${_OSVERSION} BATCH=yes"
++		PBUILD_FLAGS="${PBUILD_FLAGS}"
++		chroot ${CHROOTDIR} make -C /usr/ports/textproc/docproj \
++			${PBUILD_FLAGS} OPTIONS_UNSET="FOP IGOR" install clean distclean
++	fi
+ fi
+ 
+ if [ "x${RELSTRING}" = "x" ]; then
