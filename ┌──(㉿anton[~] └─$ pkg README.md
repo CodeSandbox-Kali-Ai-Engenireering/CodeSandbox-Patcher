@@ -1,7 +1,24 @@
 ┌──(kali㉿anton[~]
-└─$ ♾Cross-Shell🐞Type-Script🛠R♾-OSX-Automation
+└─$ 
+♾Cross-Shell🐞Type-Script🛠R♾-OSX-Automation
 ┌──(kali㉿anton[~]
-└─$ # Kali🐞Tmux🚀Star🚀Ship🛠Automation 
+└─$ # DD_API_KEY=3a0d468dd51d000afcb43be6cda82965 \
+DD_SITE="us3.datadoghq.com" \
+DD_APM_INSTRUMENTATION_ENABLED=host \
+DD_APPSEC_ENABLED=true \
+DD_IAST_ENABLED=true \
+DD_APPSEC_SCA_ENABLED=true \
+DD_RUNTIME_SECURITY_CONFIG_ENABLED=true \
+DD_SBOM_CONTAINER_IMAGE_ENABLED=true \
+DD_SBOM_HOST_ENABLED=true \
+DD_ENV=staging \
+DD_APM_INSTRUMENTATION_LIBRARIES=java:1,python:2,js:5,dotnet:3,ruby:2 \
+bash -c "$(curl -L https://install.datadoghq.com/scripts/install_script_agent7.sh)"
+
+
+
+
+Kali🐞Tmux🚀Star🚀Ship🛠Automation 
 https://accounts.google.com/o/saml2/idp?idpid=C038bembj
 
 
@@ -1523,7 +1540,7 @@ following steps:
  
  if [ "x${RELSTRING}" = "x" ]; then
 
- wget --no-check-certificate --quiet \
+wget --no-check-certificate --quiet \
   --method PATCH \
   --timeout=0 \
   --header 'Content-Type: application/json' \
