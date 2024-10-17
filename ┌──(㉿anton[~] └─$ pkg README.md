@@ -1,8 +1,9 @@
-┌──(kali㉿anton[~]
-└─$ 
+[~]└─$ {cat./env:=$ pkg install
 ♾Cross-Shell🐞Type-Script🛠R♾-OSX-Automation
-┌──(kali㉿anton[~]
-└─$ # DD_API_KEY=3a0d468dd51d000afcb43be6cda82965 \
+[~]└─$ {cat./env:=$ pkg install 
+#
+
+DD_API_KEY=3a0d468dd51d000afcb43be6cda82965 \
 DD_SITE="us3.datadoghq.com" \
 DD_APM_INSTRUMENTATION_ENABLED=host \
 DD_APPSEC_ENABLED=true \
